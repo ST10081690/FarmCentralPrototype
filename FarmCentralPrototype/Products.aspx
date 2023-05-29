@@ -9,6 +9,10 @@
             font-family: 'Century Gothic';
         }
 
+        .auto-style1 {
+            width: 119px;
+        }
+
     </style>
 
     <h4>&nbsp;</h4>
@@ -20,7 +24,7 @@
     <table class="nav-justified">
         <tr>
             <td class="modal-sm" style="width: 17px">&nbsp;</td>
-            <td style="width: 113px">Product Name:<br />
+            <td class="auto-style1">Product Name:<br />
                 <br />
             </td>
             <td>
@@ -31,7 +35,7 @@
         </tr>
         <tr>
             <td class="modal-sm" style="width: 17px">&nbsp;</td>
-            <td style="width: 113px">Date of Arrival:<br />
+            <td class="auto-style1">Date of Arrival:<br />
                 <br />
                 <br />
                 <br />
@@ -57,7 +61,7 @@
         </tr>
         <tr>
             <td class="modal-sm" style="width: 17px">&nbsp;</td>
-            <td style="width: 113px">Quantity:<br />
+            <td class="auto-style1">Quantity:<br />
                 <br />
             </td>
             <td>
@@ -69,7 +73,7 @@
         <tr>
            </td>
             <td class="modal-sm" style="width: 17px">&nbsp;</td>
-            <td style="width: 113px">Product Type:<br />
+            <td class="auto-style1">Product Type:<br />
                 <br />
                 Product Price:&nbsp;&nbsp; R<br />
                 <br />
@@ -87,11 +91,11 @@
         </tr>
         <tr>
             <td class="modal-sm" style="width: 17px">&nbsp;</td>
-            <td style="width: 113px">&nbsp;</td>
+            <td class="auto-style1">&nbsp;</td>
             <td>
                 <br />
                 <br />
-                <asp:Button ID="Btn_AddProd" runat="server" BackColor="#0066FF" ForeColor="White" Text="Add" Width="113px" OnClick="Btn_AddProd_Click" />
+                <asp:Button ID="Btn_AddProd" runat="server" BackColor="White" ForeColor="Black" Text="Add" Width="113px" OnClick="Btn_AddProd_Click" />
                 &nbsp;<br />
                 <br />
                 <asp:Label ID="Lbl_success" runat="server" Text="Product Saved Sucessfully!"></asp:Label>

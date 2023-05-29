@@ -74,7 +74,7 @@
     <table class="nav-justified">
         <tr>
             <td style="width: 370px">
-                <asp:Button ID="Btn_ClearFilter" runat="server" OnClick="Btn_ClearFilter_Click" Text="Clear Filter" />
+                <asp:Button ID="Btn_ClearFilter" runat="server" OnClick="Btn_ClearFilter_Click" Text="Clear Filter" BackColor="White" ForeColor="Black" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </td>
             <td style="width: 254px" class="modal-sm">
@@ -91,13 +91,13 @@
         <asp:GridView ID="GrdV_AllProd" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Width="558px" DataKeyNames="p_id" DataSourceID="SearchAllProdSource">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
-                <asp:BoundField DataField="p_id" HeaderText="p_id" InsertVisible="False" ReadOnly="True" SortExpression="p_id" />
-                <asp:BoundField DataField="p_name" HeaderText="p_name" SortExpression="p_name" />
-                <asp:BoundField DataField="p_price" HeaderText="p_price" SortExpression="p_price" />
-                <asp:BoundField DataField="quantity" HeaderText="quantity" SortExpression="quantity" />
-                <asp:BoundField DataField="date_added" HeaderText="date_added" SortExpression="date_added" />
-                <asp:BoundField DataField="u_id" HeaderText="u_id" SortExpression="u_id" />
-                <asp:BoundField DataField="pt_id" HeaderText="pt_id" SortExpression="pt_id" />
+                <asp:BoundField DataField="p_id" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="p_id" />
+                <asp:BoundField DataField="p_name" HeaderText="Name" SortExpression="p_name" />
+                <asp:BoundField DataField="p_price" HeaderText="Price" SortExpression="p_price" />
+                <asp:BoundField DataField="quantity" HeaderText="Quantity" SortExpression="quantity" />
+                <asp:BoundField DataField="date_added" HeaderText="Date Added" SortExpression="date_added" />
+                <asp:BoundField DataField="u_id" HeaderText="User ID" SortExpression="u_id" />
+                <asp:BoundField DataField="pt_id" HeaderText="Type ID" SortExpression="pt_id" />
             </Columns>
             <EditRowStyle BackColor="#2461BF" />
             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -131,7 +131,7 @@
         <asp:SqlDataSource ID="SearchByFrmrNDate" runat="server" ConnectionString="<%$ ConnectionStrings:FarmDbConnection %>" SelectCommand="SELECT * FROM [PRODUCT] WHERE (([u_id] = @u_id) AND ([date_added] &gt;= @date_added) AND ([date_added] &lt;= @date_added2))">
             <SelectParameters>
                 <asp:SessionParameter Name="u_id" SessionField="filterFrmrSearch" Type="Int32" />
-                <asp:SessionParameter Name="date_added" SessionField="filterEndDtSearch" Type="String" />
+                <asp:SessionParameter Name="date_added" SessionField="filterStrtDtSearch" Type="String" />
                 <asp:SessionParameter Name="date_added2" SessionField="filterEndDtSearch" Type="String" />
             </SelectParameters>
         </asp:SqlDataSource>

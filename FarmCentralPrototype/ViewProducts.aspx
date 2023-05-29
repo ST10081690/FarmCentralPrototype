@@ -49,10 +49,10 @@
     </p>
     <p>&nbsp;</p>
     <p>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="pt_id" DataSourceID="ProductTypeSource" ForeColor="#333333" GridLines="None" Width="165px">
+        <asp:GridView ID="GrdV_pType" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="pt_id" DataSourceID="ProductTypeSource" ForeColor="#333333" GridLines="None" Width="165px">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
-                <asp:BoundField DataField="pt_id" HeaderText="pt_id" InsertVisible="False" ReadOnly="True" SortExpression="pt_id" />
+                <asp:BoundField DataField="pt_id" HeaderText="Type ID" InsertVisible="False" ReadOnly="True" SortExpression="pt_id" />
                 <asp:BoundField DataField="p_type" HeaderText="Product Type" SortExpression="p_type" />
             </Columns>
             <EditRowStyle BackColor="#2461BF" />

@@ -23,7 +23,9 @@ constraint fk_userType foreign key (ut_id) references [USER_TYPE](ut_id)
 
 insert into [USER] values
 ('fc_emp01', 'Marcus', 'Cameron', 'farmCentral4L', 1),
+('fc_emp02', 'Thomas', 'Jenkins', 'St0ckin9', 1),
 ('fc_farmer01', 'Andrew', 'Peter', 'FieldCrops10', 2);
+
 
 create table [PRODUCT_TYPE] (
 pt_id int not null identity (1,1) primary key,

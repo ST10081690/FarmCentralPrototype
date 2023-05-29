@@ -30,11 +30,26 @@ namespace FarmCentralPrototype
             //Making success label invisible
             Lbl_logSuccess.Visible = false;
 
+            /*
+             * REFERENCING:
+             * Bean Software (2008) How To Change Page Background Color With ASP.NET Server Side, 
+             * How to change page background color with ASP.NET Server Side. 
+             * Available at: https://beansoftware.com/ASP.NET-FAQ/Change-Page-Background.aspx (Accessed: 20 May 2023). 
+             */
+
             //setting the page background colour
             LoginPage.Attributes.Add("bgcolor", "Lavender");
 
         }
 
+        // ---------------METHOD TO PERFORM LOGIN---------------//
+        //------------------------------------------------------------------//
+        /*
+         * REFERENCING:
+         * Sharma, D. (2021) Introduction to ASP.NET sessions, C# Corner. 
+         * Available at: https://www.c-sharpcorner.com/UploadFile/225740/introduction-of-session-in-Asp-Net/ 
+         * (Accessed: 22 May 2023). 
+         */
         protected void Btn_login_Click1(object sender, EventArgs e)
         {
             try
@@ -67,13 +82,14 @@ namespace FarmCentralPrototype
                         Session["loginResult"] = "valid";
                         int typeID = (int)read[5];
 
-
+                        //setting user role
                         if (typeID == 1)
                         {
                             Session["userType"] = "Employee";
 
                         }
 
+                        //setting user role
                         if (typeID == 2)
                         {
                             Session["userType"] = "Farmer";
@@ -82,40 +98,49 @@ namespace FarmCentralPrototype
 
                         //making boolean true
                         registered = true;
-
                     }
 
                     //closing reader
                     read.Close();
                 }
 
-                if (registered)
-                {
-                    //Making label visible
-                    Lbl_logSuccess.Visible = true;
-
-                    //Directing user to home page
-                    Response.Redirect("~/About.aspx");
-                }
-                else
-                {
-                    //Displaying message of unsuccessful login, with label
-                    Lbl_logSuccess.Visible = true;
-                    //Changing the text colour
-                    Lbl_logSuccess.ForeColor = System.Drawing.Color.Red;
-                    //Changing message
-                    Lbl_logSuccess.Text = "User Not Found.";
-                }
-
+                //calling method to redirect user
+                RedirectRegisteredUsr();
             }
-
             catch(Exception ex) //error handling
             {
                 //setting error message and displaying it
                 string errorMessage = "Something went wrong. \nPlease try again.";
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('" + errorMessage + "');", true);
-
             }
         }
+        //-----------------------------------END OF METHOD----------------------------------//
+
+
+        // ---------------METHOD TO REDIRECT USER IF REGISTERED---------------//
+        //------------------------------------------------------------------//
+        private void RedirectRegisteredUsr()
+        {
+            //checking if bool true
+            if (registered)
+            {
+                //Making label visible
+                Lbl_logSuccess.Visible = true;
+
+                //Directing user to home page
+                Response.Redirect("~/About.aspx");
+            }
+            else
+            {
+                //Displaying message of unsuccessful login, with label
+                Lbl_logSuccess.Visible = true;
+                //Changing the text colour
+                Lbl_logSuccess.ForeColor = System.Drawing.Color.Red;
+                //Changing message
+                Lbl_logSuccess.Text = "User Not Found.";
+            }
+        }
+        //-----------------------------------END OF METHOD----------------------------------//
     }
 }
+//-------------------------------------------------------END OF CLASS--------------------------------------------------------------//

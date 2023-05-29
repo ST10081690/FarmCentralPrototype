@@ -67,7 +67,7 @@
                 <asp:Label ID="Lbl_success" runat="server">Farmer Account Created Successfully!</asp:Label>
                 <br />
                 <br />
-                <asp:Button ID="Btn_AddFarmer" runat="server" BackColor="#0066FF" ForeColor="White" Text="Add" Width="113px" OnClick="Btn_AddFarmer_Click" />
+                <asp:Button ID="Btn_AddFarmer" runat="server" BackColor="White" ForeColor="Black" Text="Add" Width="113px" OnClick="Btn_AddFarmer_Click" />
                 <br />
                 <br />
             </td>

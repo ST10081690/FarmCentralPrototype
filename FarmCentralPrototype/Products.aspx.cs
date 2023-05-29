@@ -37,11 +37,18 @@ namespace FarmCentralPrototype
         //creating data table for products
         public DataTable ProdTbl = new DataTable();
 
+        //string to hold selected prod type list item.text
         public static string selectedPType;
 
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            /*
+             * REFERENCING:
+             * Syncfusion (2023) To know the purpose of using IsPostBack property in the OLAP controls, Syncfusion. 
+             * Available at: https://support.syncfusion.com/kb/article/5193/what-is-the-purpose-of-using-ispostback-property-in-the-olap-controls#:~:text=Generally%2C%20the%20IsPostBack%20property%20is,IsPostBack%20property%20is%20used%20here.
+             * (Accessed: 25 May 2023). 
+             */
             if (IsPostBack)
             {
                 selectedPType = DDList_prodType.SelectedItem.Text;
@@ -120,6 +127,11 @@ namespace FarmCentralPrototype
 
         // ---------------METHOD TO FILL DATA TABLE WITH INFO---------------//
         //------------------------------------------------------------------//
+        /*
+         * REFERENCING:
+         * ProgrammingGeek (2020) Complete CRUD operation in ASP.NET C# with SQL Server Step by step, YouTube. 
+         * Available at: https://www.youtube.com/watch?v=I5cWkoMeQIY (Accessed: 22 May 2023). 
+         */
         private void GetProdTypes()
         {
             try
@@ -160,8 +172,6 @@ namespace FarmCentralPrototype
         //------------------------------------------------------------------//
         private void SaveProdType()
         {
-            
-
             SqlConnection farmDbConnect = new SqlConnection(ConfigurationManager.ConnectionStrings["FarmDbConnection"].ConnectionString);
 
             try
@@ -245,6 +255,9 @@ namespace FarmCentralPrototype
                     Lbl_success.Visible = true;
 
                 }
+
+                //Directing user to view products page
+                Response.Redirect("~/ViewProducts.aspx");
 
             }
 

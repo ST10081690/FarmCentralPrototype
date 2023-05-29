@@ -239,8 +239,14 @@ namespace FarmCentralPrototype
 
         // ---------------METHOD TO HANDLE START DATE SELECTION---------------//
         //------------------------------------------------------------------//
+        /*
+         * REFERENCING:
+         * Chaudhary, M. (2016) How to search/filter data in gridview [asp.net], YouTube. 
+         * Available at: https://www.youtube.com/watch?v=yvervVjdGSs (Accessed: 27 May 2023). 
+         */
         protected void DDList_pStartDate_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //calling method to save start date selection
             SaveStrtDt();
 
             //hiding label
@@ -263,6 +269,7 @@ namespace FarmCentralPrototype
         //------------------------------------------------------------------//
         private void SaveStrtDt()
         {
+            //saving content to session
             Session["filterStrtDtSearch"] = DDList_pStartDate.SelectedItem.Text;
 
             //making bool true
@@ -275,8 +282,15 @@ namespace FarmCentralPrototype
 
         // ---------------METHOD TO FILTER PRODUCT BY FARMER & DATE ---------------//
         //-------------------------------------------------------------------------//
+        /*
+         * REFERENCING:
+         * Khan, M. (2017) Get selected text and value inside Dropdownlist selectedindexchanged event in ASP.NET, ASPSnippets. 
+         * Available at: https://www.aspsnippets.com/Articles/Get-Selected-Text-and-Value-inside-DropDownList-SelectedIndexChanged-event-in-ASPNet.aspx 
+         * (Accessed: 25 May 2023). 
+         */
         protected void DDList_pEndDate_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //calling method to save end date selection
             SaveEndDate();
             
             //hiding label

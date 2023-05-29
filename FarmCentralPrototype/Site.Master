@@ -38,7 +38,7 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-header-Blue navbar-fixed-top">
+        <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="more options">
@@ -58,7 +58,7 @@
                         <li><a runat="server" href="~/ViewFarmers">View Farmers</a></li>
                         <li><a runat="server" href="~/InspectProducts">View Products</a></li>
                         <li>
-                            <asp:Button ID="Btn_logoutEmp" class=btn-default runat="server" OnClick="Btn_logout_Click" Text="Log Out" style="margin-top:12px" BorderStyle="None"/>
+                            <asp:Button ID="Btn_logoutEmp" class=btn-default runat="server" OnClick="Btn_logout_Click" Text="Log Out" style="margin-top:14px" BorderStyle="None"/>
                         </li>
 
                         <% }%>
@@ -69,7 +69,7 @@
                         <li><a runat="server" href="~/Products">Add Product</a></li>
                         <li><a runat="server" href="~/ViewProducts">View Products</a></li>
                         <li>
-                            <asp:Button ID="Btn_logoutFrmr" class=btn-default runat="server" OnClick="Btn_logout_Click" Text="Log Out" style="margin-top:12px" BorderStyle="None"/>
+                            <asp:Button ID="Btn_logoutFrmr" class=btn-default runat="server" OnClick="Btn_logout_Click" Text="Log Out" style="margin-top:14px" BorderStyle="None"/>
                         </li>
                         <% }%>
                         

@@ -56,6 +56,9 @@ namespace FarmCentralPrototype
                 //Displayng success message
                 Lbl_success.Visible = true;
 
+                //Directing user to view farmer page
+                Response.Redirect("~/ViewFarmers.aspx");
+
             }
             catch(Exception ex) //error handling
             {
