@@ -2,11 +2,41 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <style type="text/css">
-        body
-        {
-            background-color: lavender;
+        .roundTextBox{
+            border: 1px solid;
+            border-radius:20px;
+            padding-left:1vw;
+        }
 
-            font-family: 'Century Gothic';
+        .roundButton{
+            border: 1px solid;
+            border-radius:20px;
+            color:white;
+            background-color:dimgray;
+        }
+
+        /*Referencing:Inixia (2023) Inixia: Make website backgrounds in seconds, Inixia. 
+         Available at: https://www.app.websitebackgroundmaker.com/app?designType=animatedGradient (Accessed: 22 June 2023). */
+         body
+        {
+            background: linear-gradient(90deg, #adc9de 0%, #d49fed 100%);
+            background-size:900% 900%;
+            animation:gradient 10s ease infinite;
+
+            font-family: 'Microsoft JhengHei UI';
+        }
+
+        @keyframes gradient{
+        0%{
+            background-position: 0% 50%;
+           }
+        50%{
+            background-position:100% 50%;
+
+            }
+        100%{
+            background-position: 0% 50%
+            }
         }
 
         .auto-style1 {
@@ -28,7 +58,7 @@
                 <br />
             </td>
             <td>
-                <asp:TextBox ID="TxtBx_prodName" runat="server" Width="177px"></asp:TextBox>
+                <asp:TextBox ID="TxtBx_prodName" runat="server" Width="177px" CssClass="roundTextBox"></asp:TextBox>
                 <br />
                 <br />
             </td>
@@ -65,7 +95,7 @@
                 <br />
             </td>
             <td>
-                <asp:TextBox ID="TxtBx_prodQty" runat="server" Width="177px"></asp:TextBox>
+                <asp:TextBox ID="TxtBx_prodQty" runat="server" Width="177px" CssClass="roundTextBox"></asp:TextBox>
                 <br />
                 <br />
             </td>
@@ -84,7 +114,7 @@
                 </asp:DropDownList>
                 <br />
                 <br />
-                <asp:TextBox ID="TxtBx_prodPrice" runat="server" Width="177px"></asp:TextBox>
+                <asp:TextBox ID="TxtBx_prodPrice" runat="server" Width="177px" CssClass="roundTextBox"></asp:TextBox>
                 <br />
                 <br />
             </td>
@@ -95,7 +125,8 @@
             <td>
                 <br />
                 <br />
-                <asp:Button ID="Btn_AddProd" runat="server" BackColor="White" ForeColor="Black" Text="Add" Width="113px" OnClick="Btn_AddProd_Click" />
+                &nbsp;
+                <asp:Button ID="Btn_AddProd" runat="server" Text="Add" Width="113px" OnClick="Btn_AddProd_Click" CssClass="roundButton"/>
                 &nbsp;<br />
                 <br />
                 <asp:Label ID="Lbl_success" runat="server" Text="Product Saved Sucessfully!"></asp:Label>

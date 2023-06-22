@@ -1,0 +1,74 @@
+﻿/*Referencing:Daily Tuition (2018) ASP net login page using CSS Design - Part 1, 
+YouTube. Available at: https://www.youtube.com/watch?v=q5KSbVZGklw (Accessed: 22 June 2023).*/
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Microsoft JhengHei UI Light';
+    background-color: darkturquoise;
+}
+
+.secondSection{
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    width:100vw;
+    height:100vh;
+    position:absolute;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.secondSection .newContainer {
+        width: 75vw;
+        height: 65vh;
+        padding-left:32vw;
+    }
+
+.content h2 {
+    font-family: Microsoft JhengHei UI Light;
+    align-items: center;
+}
+
+.content h4 {
+    font-family: Microsoft JhengHei UI Light;
+    align-items: center;
+}
+
+.content input[type=text]{
+    margin-top:2px;
+    margin-left:13vw;
+    height:30px;
+    border:0;
+    border-radius:20px;
+
+}
+
+.content input[type=password] {
+    margin-top: 2px;
+    margin-left: 13vw;
+    height: 30px;
+    border: 0;
+    border-radius: 20px;
+}
+
+.content input[type=submit] {
+    margin-top: 50px;
+    margin-bottom: 2px;
+    margin-left: 14.5vw;
+    padding-top:2px;
+    padding-left:20px;
+    padding-right:20px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 9px;
+    color:white;
+    background-color:dimgray;
+}
+
+.content input[placeholder] {
+    font-family: Microsoft JhengHei UI Light;
+    padding-left: 1vw;
+    font-size: 13px;
+}

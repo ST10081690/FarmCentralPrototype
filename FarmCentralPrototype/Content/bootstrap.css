@@ -132,10 +132,16 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer;
+  ing: content-box;
 }
 button[disabled],
+html input[disable default;
+}
+button::-moz-focus-ir,
+input::-moz-focus-inner {
+  border: 0;
+  paddin0;
+  pan[disabled],
 html input[disabled] {
   cursor: default;
 }
@@ -3160,8 +3166,7 @@ fieldset[disabled] a.btn {
 .btn-default {
   color: #333;
   background-color: #fff;
-  border-color: #ccc;
-}
+  border-color: #ccc;ss..
 .btn-default:focus,
 .btn-default.focus {
   color: #333;

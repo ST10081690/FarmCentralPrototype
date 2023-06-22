@@ -38,7 +38,7 @@ namespace FarmCentralPrototype
              */
 
             //setting the page background colour
-            LoginPage.Attributes.Add("bgcolor", "Lavender");
+            //LoginPage.Attributes.Add("bgcolor", "Lavender");
 
         }
 

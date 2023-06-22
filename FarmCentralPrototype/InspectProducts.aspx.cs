@@ -97,6 +97,9 @@ namespace FarmCentralPrototype
         }
         //-----------------------------------END OF METHOD----------------------------------//
 
+
+        // ---------------METHOD TO HANDLE FARMER SELECTION---------------//
+        //----------------------------------------------------------------------//
         protected void DDList_pFarmer_SelectedIndexChanged(object sender, EventArgs e)
         {
             //saving selection

@@ -201,6 +201,7 @@
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="InspectProducts.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="MyStyle.css" />
     <Content Include="Products.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

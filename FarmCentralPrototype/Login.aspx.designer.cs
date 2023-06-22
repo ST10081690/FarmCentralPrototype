@@ -15,15 +15,6 @@ namespace FarmCentralPrototype
     {
 
         /// <summary>
-        /// LoginPage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl LoginPage;
-
-        /// <summary>
         /// form1 control.
         /// </summary>
         /// <remarks>
@@ -33,42 +24,6 @@ namespace FarmCentralPrototype
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Lbl_login control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Lbl_login;
-
-        /// <summary>
-        /// Lbl_loginWelcome control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Lbl_loginWelcome;
-
-        /// <summary>
-        /// Lbl_beforeProceed control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Lbl_beforeProceed;
-
-        /// <summary>
-        /// Lbl_usrName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Lbl_usrName;
-
-        /// <summary>
         /// TxtBx_logUsrName control.
         /// </summary>
         /// <remarks>
@@ -76,15 +31,6 @@ namespace FarmCentralPrototype
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtBx_logUsrName;
-
-        /// <summary>
-        /// Lbl_Passwrd control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Lbl_Passwrd;
 
         /// <summary>
         /// TxtBx_logPass control.

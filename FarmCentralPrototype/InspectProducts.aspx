@@ -1,11 +1,36 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="InspectProducts.aspx.cs" Inherits="FarmCentralPrototype.InspectProducts" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <style type="text/css">
+
+        .roundButton{
+            border: 1px solid;
+            border-radius:20px;
+            color:white;
+            background-color:dimgray;
+        }
+        /*Referencing:Inixia (2023) Inixia: Make website backgrounds in seconds, Inixia. 
+         Available at: https://www.app.websitebackgroundmaker.com/app?designType=animatedGradient (Accessed: 22 June 2023). */
         body
         {
-            background-color: lavender;
+            background: linear-gradient(90deg, #adc9de 0%, #d49fed 100%);
+            background-size:900% 900%;
+            animation:gradient 10s ease infinite;
 
-            font-family: 'Century Gothic';
+            font-family: 'Microsoft JhengHei UI Light';
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%
+            }
         }
 
     </style>
@@ -74,7 +99,7 @@
     <table class="nav-justified">
         <tr>
             <td style="width: 370px">
-                <asp:Button ID="Btn_ClearFilter" runat="server" OnClick="Btn_ClearFilter_Click" Text="Clear Filter" BackColor="White" ForeColor="Black" />
+                <asp:Button ID="Btn_ClearFilter" runat="server" OnClick="Btn_ClearFilter_Click" Text="Clear Filter" CssClass="roundButton"/>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </td>
             <td style="width: 254px" class="modal-sm">
